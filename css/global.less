@@ -10,6 +10,7 @@ html{
 }
 body{
 	background:@body-bg;
+	font-size:@base-font-size;
 	font-family: @font-family;
 	color:@black;
 
@@ -33,50 +34,29 @@ h1, h2, h3, h4, h5, p{
 
 
 h1, .h1 {
-	font-size:calc(1rem * @text-scale*3 );
-	@media @mobile{
-		font-size:calc(1rem * @mobile-scale*3 );
-	}
-	
+	.font-size(42px);	
 	font-weight:700;
+	@media @mobile{
+		.font-size(38px);
+	}
 }
 h2, .h2 {
-	font-size:calc(1rem * @text-scale*2.5 );
+	.font-size(36px);
 	@media @mobile{
-		font-size:calc(1rem * @mobile-scale*2.5 );
+		.font-size(30px);
 	}
-
-	
 	&.subheadline{
-		font-size:calc(1rem * @text-scale*2 );
-		@media @mobile{
-			font-size:calc(1rem * @mobile-scale*2 );
-		}
+		.font-size(34px);
 		margin-top:0;
 		font-weight: 400;
 	}
 }
-h3, .h3{ 
-	font-size:calc(1rem * @text-scale*1.5 ); 
-	@media @mobile{
-		font-size:calc(1rem * @mobile-scale*1.5 ); 
-	}
-}
-h4, .h4{ 
-	font-size:calc(1rem * @text-scale*1.25 ); 
-	@media @mobile{
-		font-size:calc(1rem * @mobile-scale*1.25 ); 
-	}
-}
-h5, .h5{ 
-	font-size:calc(1rem * @text-scale*1 );
-	@media @mobile{
-		font-size:calc(1rem * @mobile-scale*1 );
-	}
-}
+h3, .h3{ .font-size(24px); }
+h4, .h4{ .font-size(20px); }
+h5, .h5{ .font-size(18px);}
 p{ 
 	/*.font-size(16px);*/
-	/*font-size:@base-font-size;*/
+	font-size:@base-font-size;
 	font-size:1rem ;
 	
 }
@@ -379,7 +359,7 @@ Utilities
 cta
 -------------- */
 a{
-	.linkColor(@primary-color);
+	.linkColor(#3ab8b2);
 	&.white{
 		.whiteLink(@white);
 	}

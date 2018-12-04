@@ -18,8 +18,9 @@ Header
 
 /*header styles*/
 .header{
+
 	.navbar{
-		background: rgba(255,255 ,255, .9);
+		background: @navy;;
 		margin-bottom:0;
 		border-bottom:1px solid #ccc;
 		-webkit-box-shadow: 0 0 5px 1px rgba(0,0,0,.2);
@@ -47,12 +48,21 @@ Header
 
 		.navbar-nav{
 			margin:20px 0;
+			li{
+				a{
+					color:@white;
+					&:hover, &:focus, &:active{
+						color:@teal;
+						background:none;
+					}
+				}
+			}
 		}
 		
 	}
 
 	.logo{
-		width:300px;
+		/*width:300px;*/
 		@media @mobile{
 			
 

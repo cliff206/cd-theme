@@ -1,0 +1,101 @@
+
+/*********************************************************************************************
+Page/Location Specific Styles
+**********************************************************************************************/
+.about{
+	.flex{
+		.flex-display;
+		.justify-content(space-around);
+		.flex-flow(row nowrap);
+		@media @mobile{
+			.flex-flow(column nowrap);
+			.align-items(center);
+		}
+
+		.flex-child{
+			.flex-grow(1);
+			.flex-basis(auto);
+			margin-left:10px;
+			margin-right:10px;
+			width:100%;
+		}
+	}
+
+	.name{
+		h1{
+			font-size:8vw;
+			@media @desktop-wide{
+				font-size:6vw
+			}
+			line-height:100%;
+		}
+	}
+}
+
+/* ---------------------------------------------------------------------------------------
+Projects section
+--------------------------------------------------------------------------------------- */
+.flex-parent{
+	.flex-display;
+	.justify-content(space-around);
+	.flex-flow(row nowrap);
+	@media @mobile{
+		.flex-flow(column nowrap);
+		.align-items(center);
+	}
+	@media @desktop-sm{
+		.flex-flow(row wrap);
+	}
+	.flex-child{
+		.flex-grow(1);
+		.flex-basis(auto);
+		margin-left:10px;
+		margin-right:10px;
+		@media @desktop-sm{
+			.flex-grow(2);
+		} 
+		width: 265px;
+	}
+}
+
+
+/* ---------------------------------------------------------------------------------------
+Skills section
+--------------------------------------------------------------------------------------- */
+.info{
+
+}
+
+.skills-container{
+	.flex-display;
+	.justify-content(space-around);
+	.flex-flow(row nowrap);
+	@media @mobile{
+		.flex-flow(row wrap);
+		
+	}
+	@media @desktop-sm{
+		.flex-flow(row wrap);
+	}
+	.skills-list{
+		.flex-grow(1);
+		.flex-basis(auto);
+		margin-left:10px;
+		margin-right:10px;
+		@media @desktop-sm{
+			.flex-grow(2);
+		} 
+		width: 265px;
+
+		.panel-heading{
+			background:@dk-teal;
+			color:@white;
+		} 
+	}
+}
+/* ---------------------------------------------------------------------------------------
+Time Line
+--------------------------------------------------------------------------------------- */
+.timeline{
+	background:#e9f0f5;
+}

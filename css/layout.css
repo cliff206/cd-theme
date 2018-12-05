@@ -703,7 +703,12 @@ navbar toggle - toggle from hamburger to "x"
 pano - transparent overlay on mobile
 --------------------------------------------------------------------------------------- */
 .pg-offset {
-  margin-top: 100px;
+  margin-top: 135px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px)and (max-width: 1280px), only screen and (min-width: 1280px) {
+  .pg-offset {
+    margin-top: 185px;
+  }
 }
 /* ---------------------------------------------------------------------------------------
 Video - responsive embed
@@ -734,6 +739,9 @@ Footer
 Header
 --------------------------------------------------------------------------------------- */
 /*header styles*/
+.header {
+  /*Trigger mobile menu and larger breakpoint*/
+}
 .header .navbar {
   background: #3a4966;
   margin-bottom: 0;
@@ -750,28 +758,118 @@ Header
     padding-right: 15px;
   }
 }
-.header .navbar-collapse {
-  padding: 10px 0;
-}
-@media only screen and (max-width: 768px), only screen and (min-width: 768px) and (max-width: 991px) {
-  .header .navbar-collapse {
-    padding: 10px 0;
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px)and (max-width: 1280px), only screen and (min-width: 1280px) {
+  .header .navbar-header {
+    width: 100%;
   }
 }
-.header .navbar-collapse .navbar-nav {
-  margin: 20px 0;
+.header .navbar-fixed-top .navbar-collapse {
+  max-height: unset;
 }
-.header .navbar-collapse .navbar-nav li a {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .header .navbar-header {
+    float: none;
+  }
+  .header .navbar-toggle {
+    display: block;
+  }
+  .header .navbar-collapse {
+    /* border-top: 1px solid transparent;
+	        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);*/
+  }
+  .header .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .header .navbar-collapse.collapse.in {
+    display: block!important;
+  }
+  .header .navbar-nav {
+    float: none!important;
+  }
+  .header .navbar-nav > li {
+    float: none;
+  }
+  .header .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+.header .navbar-collapse {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px)and (max-width: 1280px), only screen and (min-width: 1280px) {
+  .header .navbar-collapse .navbar-nav {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px)and (max-width: 1280px), only screen and (min-width: 1280px) {
+  .header .navbar-collapse .navbar-nav > li {
+    display: inline-block;
+    float: none;
+  }
+}
+.header .navbar-collapse .navbar-nav > li a {
   color: #ffffff;
+  padding: 10px;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: calc(21px);
 }
-.header .navbar-collapse .navbar-nav li a:hover,
-.header .navbar-collapse .navbar-nav li a:focus,
-.header .navbar-collapse .navbar-nav li a:active {
+.header .navbar-collapse .navbar-nav > li a:hover,
+.header .navbar-collapse .navbar-nav > li a:focus,
+.header .navbar-collapse .navbar-nav > li a:active {
   color: #81d7d3;
   background: none;
 }
 .header .logo {
-  /*width:300px;*/
+  width: 300px;
+}
+.header .teal-bg a {
+  color: #3a4966;
+}
+.header .teal-bg a:visited {
+  color: #3a4966;
+}
+.header .teal-bg a:hover,
+.header .teal-bg a:focus,
+.header .teal-bg a:active {
+  color: #151a25;
+  text-decoration: none;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -ms-transition: 0.25s;
+  transition: 0.25s;
+}
+.header .affix .logo {
+  width: 200px;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -ms-transition: 0.25s;
+  transition: 0.25s;
+}
+.header .affix .navbar-header {
+  width: auto;
+  -webkit-transition: 0.25s;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -ms-transition: 0.25s;
+  transition: 0.25s;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 1200px)and (max-width: 1280px), only screen and (min-width: 1280px) {
+  .header .affix .navbar-nav {
+    width: auto;
+    margin-top: 20px;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    -ms-transition: 0.25s;
+    transition: 0.25s;
+  }
 }
 /*********************************************************************************************
 Page/Location Specific Styles
